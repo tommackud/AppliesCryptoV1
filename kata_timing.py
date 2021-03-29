@@ -3,13 +3,13 @@ import bcrypt
 import hashlib
 
 
-def test_func(n):
-    start_time = time.time()
-    for i in range(n):
-        for j in range(n):
-            x = i * j
-    end_time = time.time()
-    return end_time - start_time
+# def test_func(n):
+#     start_time = time.time()
+#     for i in range(n):
+#         for j in range(n):
+#             x = i * j
+#     end_time = time.time()
+#     return end_time - start_time
 
 
 # print(test_func(10000))
@@ -17,38 +17,23 @@ def test_func(n):
 # print(test_func(100))
 
 
-import bcrypt
+# def test_func(n):
+#     start_time = time.time()
+#     for i in range(n):
+#         for j in range(n):
+#             x = i * j
+#     end_time = time.time()
+#     if .09 < end_time - start_time < .11:
+#         return end_time - start_time
+
+# Now use timing and some guessing to make a function which consumes just a password and returns a (salt, r, theHash)
+# triplet that took around 1 second to create. Verify that you can recreate theHash.
+
 import hashlib
-import time
+import bcrypt
 
-count_sec = 0
-my_pwd = 'This is a new password'
-time = time.time()
-print(time)
+salt = bcrypt.gensalt()
 
-def calc_time(password):
-    the_hash = ''
-    salt = bcrypt.gensalt()
-    r = 0
-    while r < 1:
-        the_hash = hashlib.sha256(password.encode()).hexdigest()
-
-    return salt, r, the_hash
-
-
-print(calc_time(my_pwd))
-
-
-#
-# t_end = time.time() + 1
-# while time.time() < t_end:
-#     result = hashlib.sha256(my_srt.encode() + salt).hexdigest()
-#     count_sec += 1
-#
-#
-# print('Salt: ' + str(salt.decode()))
-# print('Count: ' + str(count_sec / 1000000))
-# print('Result: ' + str(my_srt))
-
-
+def timing_func(pwd):
+    while time < 1 sec
 
