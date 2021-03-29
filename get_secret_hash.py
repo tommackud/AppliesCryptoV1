@@ -15,5 +15,3 @@ print('Salty hash: ' + str(my_word_hash))
 #     if hashlib.sha256(word.encode()).hexdigest() == my_word_hash:
 #         print(word)
 # f.close()
-
-
